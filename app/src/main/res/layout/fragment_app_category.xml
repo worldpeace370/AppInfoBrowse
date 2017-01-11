@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:layout_gravity="center"
+             android:gravity="center"
+             tools:context="com.wxk.appinfobrowse.AppCategoryFragment">
+    <FrameLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_loading"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/live_loading_icon"/>
+
+            <TextView android:id="@+id/tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_loading"
+                android:text="努力加载中……"
+                android:textColor="@color/text_color_grey"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
